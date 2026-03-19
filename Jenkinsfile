@@ -31,7 +31,7 @@ pipeline {
             steps {
                 echo 'Desplegando en ambiente de pruebas...'
                 // Aquí podrías usar PM2 para mantener la app viva localmente
-                // sh 'npx pm2 restart mi-app || npx pm2 start dist/main.js --name mi-app' // Descomentar cuando se tenga PM2
+                sh 'npx pm2 restart mi-app || npx pm2 start src/app.js --name mi-app' // Descomentar cuando se tenga PM2
             }
         }
     }
